@@ -26,7 +26,7 @@ if (form) {
     if (accessKey === "YOUR_ACCESS_KEY_HERE") {
       note.className = "form-note err";
       note.textContent =
-        "Form not configured yet — add your Web3Forms access key in this page's HTML.";
+        "Form not configured yet. Add your Web3Forms access key in this page's HTML.";
       return;
     }
 
@@ -45,13 +45,13 @@ if (form) {
         form.reset();
         form.style.display = "none";
         note.className = "form-note ok";
-        note.textContent = "Got it — we'll be in touch.";
+        note.textContent = "Got it. We'll be in touch.";
       } else {
         throw new Error(data.message || "Something went wrong");
       }
     } catch (err) {
       note.className = "form-note err";
-      note.textContent = "Couldn't submit — please try again. (" + err.message + ")";
+      note.textContent = "Couldn't submit. Please try again. (" + err.message + ")";
       btn.disabled = false;
       btn.textContent = originalLabel;
     }
