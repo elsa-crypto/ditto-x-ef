@@ -2,8 +2,8 @@
   --bg: #f7f3ec;
   --ink: #1a1418;
   --ink-soft: #6b6258;
-  --accent: #ff5a1f;       /* EF orange */
-  --ef-purple: #5b2a86;    /* EF purple */
+  --accent: #fa7452;       /* EF coral orange */
+  --ef-purple: #6c0ee0;    /* EF electric purple */
   --accent-ink: #ffffff;
   --ditto-pink: #ff2e9a;   /* secondary, used sparingly for the Ditto side */
   --card: #ffffff;
@@ -32,8 +32,8 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(60% 50% at 85% -10%, rgba(255, 90, 31, 0.10), transparent 70%),
-    radial-gradient(50% 40% at 0% 110%, rgba(91, 42, 134, 0.08), transparent 70%);
+    radial-gradient(60% 50% at 85% -10%, rgba(250, 116, 82, 0.12), transparent 70%),
+    radial-gradient(50% 40% at 0% 110%, rgba(108, 14, 224, 0.07), transparent 70%);
 }
 
 .wrap {
@@ -73,7 +73,8 @@ a { color: inherit; }
   line-height: 1;
 }
 
-/* EF badge — stand-in for the official EF mark until the real logo asset is swapped in */
+/* EF badge — CSS recreation of the EF wordmark (stacked coral caps on purple);
+   swap for the official logo asset if a file becomes available */
 .logo-ef {
   display: flex;
   align-items: center;
@@ -83,27 +84,18 @@ a { color: inherit; }
   background: var(--ef-purple);
   border-radius: 22%;
   transform: rotate(4deg);
-  box-shadow: 0 10px 26px rgba(91, 42, 134, 0.32);
-  position: relative;
+  box-shadow: 0 10px 26px rgba(108, 14, 224, 0.30);
 }
 
 .logo-ef span {
   font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: clamp(26px, 8vw, 36px);
-  color: #fff;
-  letter-spacing: -0.02em;
-}
-
-.logo-ef::after {
-  content: "";
-  position: absolute;
-  bottom: 14%;
-  left: 24%;
-  right: 24%;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
+  font-weight: 800;
+  font-size: clamp(11px, 3.2vw, 15px);
+  line-height: 1.05;
+  color: var(--accent);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.01em;
 }
 
 .eyebrow {
@@ -169,8 +161,8 @@ a { color: inherit; }
   font-size: 22px;
 }
 
-.choice-card.founder .choice-icon { background: rgba(255, 90, 31, 0.14); }
-.choice-card.investor .choice-icon { background: rgba(91, 42, 134, 0.12); }
+.choice-card.founder .choice-icon { background: rgba(250, 116, 82, 0.16); }
+.choice-card.investor .choice-icon { background: rgba(108, 14, 224, 0.10); }
 
 .choice-copy { flex: 1; }
 
@@ -274,7 +266,7 @@ input::placeholder, textarea::placeholder { color: #b3a99c; }
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.16);
+  box-shadow: 0 0 0 3px rgba(250, 116, 82, 0.18);
   background: #fff;
 }
 
@@ -310,11 +302,11 @@ fieldset { border: 0; margin: 0 0 18px; padding: 0; }
   border-color: var(--accent);
   background: var(--accent);
   color: var(--accent-ink);
-  box-shadow: 0 4px 12px rgba(255, 90, 31, 0.24);
+  box-shadow: 0 4px 12px rgba(250, 116, 82, 0.28);
 }
 
 .seg input:focus-visible + span {
-  box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.3);
+  box-shadow: 0 0 0 3px rgba(250, 116, 82, 0.35);
 }
 
 /* Submit */
@@ -331,10 +323,10 @@ fieldset { border: 0; margin: 0 0 18px; padding: 0; }
   margin-top: 6px;
   cursor: pointer;
   transition: transform 0.08s, box-shadow 0.15s, opacity 0.15s, background 0.15s;
-  box-shadow: 0 6px 18px rgba(91, 42, 134, 0.28);
+  box-shadow: 0 6px 18px rgba(108, 14, 224, 0.26);
 }
 
-.submit:hover { background: var(--accent); box-shadow: 0 8px 22px rgba(255, 90, 31, 0.32); }
+.submit:hover { background: var(--accent); box-shadow: 0 8px 22px rgba(250, 116, 82, 0.36); }
 .submit:active { transform: translateY(1px); }
 .submit:disabled { opacity: 0.6; cursor: progress; }
 
