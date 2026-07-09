@@ -17,12 +17,13 @@ via [Web3Forms](https://web3forms.com).
 ## Design
 
 Same warm editorial aesthetic as the Ditto Party page (cream background,
-Fraunces serif headlines, Inter body) with Entrepreneur First's bold
-black + red identity layered in as the accent color and the co-brand lockup
-on the landing page.
+Fraunces serif headlines, Inter body) with Entrepreneur First's purple +
+orange identity layered in — orange (`--accent`) for highlights and
+selected states, purple (`--ef-purple`) for the EF badge and submit
+buttons.
 
-**Note:** the "EF" mark on the landing page is a placeholder badge (black
-square, white "EF", red underline) — swap in the real Entrepreneur First
+**Note:** the "EF" mark on the landing page is a placeholder badge (purple
+square, white "EF", orange underline) — swap in the real Entrepreneur First
 logo asset once you have one, in `index.html` (`.logo-ef`).
 
 ## Form submissions
