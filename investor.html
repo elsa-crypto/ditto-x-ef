@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investor Registration — Ditto × EF</title>
+  <meta name="description" content="Register as an Entrepreneur First investor to meet matched founders." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <a class="back-link" href="index.html">&larr; Back</a>
+
+    <header class="hero" style="margin-bottom: 22px;">
+      <p class="eyebrow">EF investor registration</p>
+      <h1 class="headline" style="font-size: clamp(24px, 6vw, 30px);">Get matched with founders</h1>
+      <p class="subtitle">Quick registration — just enough to route you the right founders.</p>
+    </header>
+
+    <section class="card" aria-labelledby="apply-heading">
+      <h2 id="apply-heading" class="card-title hidden">Investor registration</h2>
+
+      <form id="apply-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+        <input type="hidden" name="subject" value="New Ditto x EF investor registration" />
+        <input type="hidden" name="from_name" value="Ditto x EF" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="field-row">
+          <div class="field">
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" required placeholder="Jordan" autocomplete="given-name" />
+          </div>
+          <div class="field">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" required placeholder="Lee" autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Entrepreneur First email</label>
+          <input type="email" id="email" name="email" required placeholder="you@joinef.com" autocomplete="email" />
+        </div>
+
+        <div class="field">
+          <label for="investor_type">What type of investor are you?</label>
+          <select id="investor_type" name="investor_type" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Investment Fellow">Investment Fellow</option>
+            <option value="Talent Investor">Talent Investor</option>
+            <option value="President">President</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field hidden" id="other-type-field">
+          <label for="investor_type_other">Please specify</label>
+          <input type="text" id="investor_type_other" name="investor_type_other" placeholder="Your role at EF" />
+        </div>
+
+        <button type="submit" class="submit" id="submit-btn">Register</button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Ditto</span>
+      <span>Ditto × Entrepreneur First</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
