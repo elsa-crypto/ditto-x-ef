@@ -73,29 +73,14 @@ a { color: inherit; }
   line-height: 1;
 }
 
-/* EF badge — CSS recreation of the EF wordmark (stacked coral caps on purple);
-   swap for the official logo asset if a file becomes available */
 .logo-ef {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: clamp(84px, 24vw, 112px);
   width: clamp(84px, 24vw, 112px);
-  background: var(--ef-purple);
+  display: block;
+  object-fit: cover;
   border-radius: 22%;
   transform: rotate(4deg);
   box-shadow: 0 10px 26px rgba(108, 14, 224, 0.30);
-}
-
-.logo-ef span {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: clamp(11px, 3.2vw, 15px);
-  line-height: 1.05;
-  color: var(--accent);
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 0.01em;
 }
 
 .eyebrow {
