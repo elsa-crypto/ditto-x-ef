@@ -26,7 +26,8 @@
     <section class="card" aria-labelledby="apply-heading">
       <h2 id="apply-heading" class="card-title hidden">Investor registration</h2>
 
-      <form id="apply-form" action="https://api.web3forms.com/submit" method="POST">
+      <form id="apply-form" action="https://api.web3forms.com/submit" method="POST"
+            data-success="You're registered. Results will be emailed to you shortly regarding attendance.">
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
         <input type="hidden" name="subject" value="New Ditto x EF investor registration" />
         <input type="hidden" name="from_name" value="Ditto x EF" />
@@ -64,9 +65,42 @@
           <input type="text" id="investor_type_other" name="investor_type_other" placeholder="Your role at EF" />
         </div>
 
+        <div class="field">
+          <label for="looking_for">What do you look for in a founder?</label>
+          <textarea id="looking_for" name="looking_for" rows="3" required placeholder="Grit, technical depth, obsession with the problem, speed..."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="sectors">What sectors or spaces are you most excited about right now?</label>
+          <textarea id="sectors" name="sectors" rows="2" required placeholder="AI infra, consumer social, fintech, climate..."></textarea>
+        </div>
+
+        <fieldset class="field">
+          <legend>What stage do you prefer to meet founders at?</legend>
+          <div class="segmented cols-3" role="radiogroup">
+            <label class="seg">
+              <input type="radio" name="stage_preference" value="Idea only" required />
+              <span>Idea only</span>
+            </label>
+            <label class="seg">
+              <input type="radio" name="stage_preference" value="Building" />
+              <span>Building</span>
+            </label>
+            <label class="seg">
+              <input type="radio" name="stage_preference" value="Live / have users" />
+              <span>Live / users</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="dealbreakers">Any instant dealbreakers? <span class="hint">(optional)</span></label>
+          <textarea id="dealbreakers" name="dealbreakers" rows="2" placeholder="Things that make you pass right away."></textarea>
+        </div>
+
         <button type="submit" class="submit" id="submit-btn">Register</button>
-        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
       </form>
+      <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
     </section>
 
     <footer class="footer">

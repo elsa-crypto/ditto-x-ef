@@ -45,7 +45,7 @@ if (form) {
         form.reset();
         form.style.display = "none";
         note.className = "form-note ok";
-        note.textContent = "Got it. We'll be in touch.";
+        note.textContent = form.dataset.success || "Got it. We'll be in touch.";
       } else {
         throw new Error(data.message || "Something went wrong");
       }
